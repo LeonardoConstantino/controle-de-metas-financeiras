@@ -1,0 +1,163 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* *{background-color: rgba(250,0,0,.1);} */
+
+input.pisca {
+    animation: piscar .5s ease infinite;
+}
+
+@keyframes piscar {
+    from {
+        background-color: rgba(255, 0, 0, .5);
+    }
+}
+
+.metas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    position: relative;
+    transition: all .3s;
+}
+
+.card .meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    height: 100px;
+    background-color: #273545;
+    padding: 10px 20px;
+    max-width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+span.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    width: 45px;
+    right: 0;
+    transform: translate(50%, -50%);
+    position: absolute;
+    transition: all .3s cubic-bezier(0.18, 0.89, 0.45, 1.11);
+}
+
+.expand .btn {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    height: 45px;
+    width: 45px;
+    font-size: 24px;
+}
+
+.btn.delete {
+    background-color: rgba(82 25 46 /.5) !important;
+}
+
+.btn.editar {
+    background-color: rgba(53 82 33 /.5) !important;
+}
+
+.btn.delete,
+.btn.editar {
+    display: none;
+}
+
+.expand:hover .btn.delete,
+.expand:hover .btn.editar {
+    display: inline-block;
+}
+
+.expand:hover span.btn {
+    display: none;
+}
+
+.expand:hover {
+    height: 100px;
+    /* gap: 6px; */
+    justify-content: space-between;
+    transform: translate(50%, -18%);
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.infos h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.infos h3::first-letter{
+    text-transform: capitalize;
+}
+.icon {
+    height: 50px;
+    width: 50px;
+
+}
+
+.icon i {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 50%;
+    /* background-color: rgba(17 174 238 /.2); */
+    /* color: rgba(17 174 238 /1); */
+    font-size: 32px;
+}
+
+/* .animaApagar {
+    transform: rotate(180deg) scale(.1);
+    filter: opacity(.1);
+} */
+
+
+.animaApagar {
+    animation-name: swashOut;
+    animation-duration: .3s;
+}
+
+@keyframes swashOut {
+    0% {
+        opacity: 1;
+        transform-origin: 50% 50%;
+        transform: scale(1, 1);
+    }
+
+    50% {
+        opacity: 1;
+        transform-origin: 50% 50%;
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        opacity: 0;
+        transform-origin: 50% 50%;
+        transform: scale(0.8, 0.8);
+    }
+}
