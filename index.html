@@ -5,14 +5,19 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Controle financeiro</title>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"/>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css" />
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 	<link rel="stylesheet" href="style.css">
-	<script src="script.js" defer></script>
+	<script src="script.js" defer type="module"></script>
 </head>
 
 <body>
-	<h1>Controle de metas financeiro</h1>
+	<header>
+		<h1>Controle de metas financeiras</h1>
+		<blockquote>
+		</blockquote>
+	</header>
 	<form>
 		<label>
 			<span>Valor total:</span>
@@ -25,108 +30,27 @@
 					<span>Nome da meta:</span>
 					<input type="text" placeholder="insira o nome da meta">
 				</label>
-	
+
 				<label>
 					<span>Divisao:</span>
 					<input type="number" placeholder="insira o valor em porcentagem ">
 				</label>
 
-				<input type="hidden" >
+				<input type="hidden">
 			</div>
 			<button data-btn="criar">Criar divisão</button>
 		</fieldset>
 	</form>
-	<div class="meio">
-		<blockquote>
-			<p>"A diferença entre um homem de sucesso e outro orientado para o fracasso é que um está aprendendo a errar, enquanto o outro está procurando aprender com seus próprios erros."</p>
-			<footer>
-				<cite>Michael John Bobak</cite>
-			</footer>
-		</blockquote>
-		<fieldset>
-			<legend>Informações</legend>
-			<p>metas</p>
-			<p>metas</p>
-			<p>meta</p>
-		</fieldset>
-	</div>
-	<fieldset data-fieldsetMetas>
+	<fieldset class="fieldsetMetas" data-fieldsetMetas>
 		<legend>Minhas metas</legend>
-		<!-- <div class="metas" data-metas>
-
-			<div class="card" data-card>
-				<div class="expand">
-					<span class="material-symbols-outlined btn" data-btn="expand">expand_more</span>
-					<button class="material-symbols-outlined btn editar" data-btn="editar" title="Editar meta">edit_note</button>
-					<button class="material-symbols-outlined btn delete" data-btn="delete" title="Apagar meta">delete</button>
-				</div>
-				<div class="meta">
-					<div class="infos">
-						<h3>nome da meta</h3>
-						<span>R$ 100.00</span>
-						<small>10%</small>
-					</div>
-					<div class="icon">
-						<i>N</i>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" data-card>
-				<div class="expand">
-					<span class="material-symbols-outlined btn" data-btn="expand">expand_more</span>
-					<button class="material-symbols-outlined btn editar" data-btn="editar" title="Editar meta">edit_note</button>
-					<button class="material-symbols-outlined btn delete" data-btn="delete" title="Apagar meta">delete</button>
-				</div>
-				<div class="meta">
-					<div class="infos">
-						<h3>nome da meta</h3>
-						<span>R$ 100.00</span>
-						<small>10%</small>
-					</div>
-					<div class="icon">
-						<i>N</i>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" data-card>
-				<div class="expand">
-					<span class="material-symbols-outlined btn" data-btn="expand">expand_more</span>
-					<button class="material-symbols-outlined btn editar" data-btn="editar" title="Editar meta">edit_note</button>
-					<button class="material-symbols-outlined btn delete" data-btn="delete" title="Apagar meta">delete</button>
-				</div>
-				<div class="meta">
-					<div class="infos">
-						<h3>nome da meta</h3>
-						<span>R$ 100.00</span>
-						<small>10%</small>
-					</div>
-					<div class="icon">
-						<i>N</i>
-					</div>
-				</div>
-			</div>
-
-			<div class="card" data-card>
-				<div class="expand">
-					<span class="material-symbols-outlined btn" data-btn="expand">expand_more</span>
-					<button class="material-symbols-outlined btn editar" data-btn="editar" title="Editar meta">edit_note</button>
-					<button class="material-symbols-outlined btn delete" data-btn="delete" title="Apagar meta">delete</button>
-				</div>
-				<div class="meta">
-					<div class="infos">
-						<h3>nome da meta</h3>
-						<span>R$ 100.00</span>
-						<small>10%</small>
-					</div>
-					<div class="icon">
-						<i>N</i>
-					</div>
-				</div>
-			</div>
-		</div> -->
 	</fieldset>
+	<fieldset class="card-info">
+	</fieldset>
+	<fieldset>
+		<legend>Grafico</legend>
+		<div class="grafico" data-grafico></div>
+	</fieldset>
+	<script src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
 </body>
 
 </html>
