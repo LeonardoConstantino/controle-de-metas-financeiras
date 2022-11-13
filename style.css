@@ -1,7 +1,7 @@
-header {
+/* header {
     display: flex;
     justify-content: space-between;
-}
+} */
 
 /* *{background-color: rgba(250,0,0,.1);} */
 
@@ -13,18 +13,6 @@ input.pisca {
     from {
         background-color: rgba(255, 0, 0, .5);
     }
-}
-
-.meio{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap
-}
-
-.meio blockquote, .meio fieldset{
-    width: 45%;
-    min-width: 350px;
 }
 
 .metas {
@@ -42,16 +30,27 @@ input.pisca {
 }
 
 .card .meta {
+    width: fit-content;
+    height: 100px;
+    padding: 10px 20px;
+    padding-bottom: 0px;
+    max-width: 250px;
+    background-color: #273545;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.card .meta>div {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    width: fit-content;
-    height: 100px;
-    background-color: #273545;
-    padding: 10px 20px;
-    max-width: 250px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.data-meta {
+    margin: 0;
+    float: right;
+    font-size: xx-small;
+    color: #a9b1ba;
 }
 
 span.btn {
@@ -160,6 +159,7 @@ span.btn {
         transform-origin: 50% 50%;
         transform: scale(0, 0);
     }
+
     100% {
         opacity: 1;
         transform-origin: 50% 50%;
@@ -219,4 +219,17 @@ span.btn {
         opacity: 0;
         transform: scale(1, 1) translate(-900%, -900%);
     }
+}
+
+.card-info span {
+    font-weight: bolder;
+}
+
+.grafico {
+    margin: 0;
+    padding: 0;
+    height: 89vh;
+    max-height: 640px;
+    position: relative;
+    overflow: hidden;
 }
