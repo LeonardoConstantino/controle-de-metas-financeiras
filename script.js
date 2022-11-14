@@ -59,7 +59,7 @@ const criarCRUD = () => {
             return
         }
 
-        dados.total = valorTotal.value
+        dados.total = +valorTotal.value
         const meta = {
             nome: nomeMeta.value,
             Porcentagem: +PorcentagemMeta.value,
