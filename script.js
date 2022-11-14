@@ -62,7 +62,7 @@ const criarCRUD = () => {
         dados.total = valorTotal.value
         const meta = {
             nome: nomeMeta.value,
-            Porcentagem: PorcentagemMeta.value,
+            Porcentagem: +PorcentagemMeta.value,
             data: dataCriacao,
             cor: cor.value ? cor.value : gerar_cor()
         }
